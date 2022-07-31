@@ -11,9 +11,9 @@ const Status=()=>{
   const Navigate=useNavigate();
   const callstatuspage= async()=>{
     try{
-      const user= await axios.get('https://fymo.herokuapp.com/api/auth/getdata');
+      const user= await axios.get('https://fymoo.herokuapp.com/api/auth/getdata');
       dispatch({type:"USER",payload:true})
-      const list=await axios.get(`https://fymo.herokuapp.com/api/auth/getmissingpersonlist/${user.data._id}`);
+      const list=await axios.get(`https://fymoo.herokuapp.com/api/auth/getmissingpersonlist/${user.data._id}`);
       setData(list.data);  
     }catch(err){
       console.log(err);

@@ -1,12 +1,14 @@
 import React from "react";
 import './post.css'
 export default function Post({ name, height, location, currentstatus, img }) {
-    console.log(img)
+    // console.log(img)
+    const pf='https://fymoo.herokuapp.com/';
+    var x=pf+img;
     return (
         <>
             <div className="card card1">
                 <div className="first_div">
-                    <img class="card-img-top card-img-top1" src={img} alt="Card image cap" />
+                    <img class="card-img-top card-img-top1" src={x} alt="Card image cap" />
                     
                 </div>
 

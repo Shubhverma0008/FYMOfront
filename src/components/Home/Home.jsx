@@ -22,7 +22,7 @@ const Home=()=>{
     }
     const callmainpage=async()=>{
         try{
-        const user=await axios.get('https://fymo.herokuapp.com/api/auth/getdata');
+        const user=await axios.get('https://fymoo.herokuapp.com/api/auth/getdata');
         setData((prev)=>{
             return {
                 ...prev,

@@ -23,7 +23,7 @@ const Register = () => {
     
     try {
       // console.log(user);
-      const data = await axios.post('https://fymo.herokuapp.com/api/auth/register', user);
+      const data = await axios.post('https://fymoo.herokuapp.com/api/auth/register', user);
       console.log(data);
       window.alert("You are registred successfully");
       Navigate('/login');
@@ -46,9 +46,9 @@ const Register = () => {
             <label><i className="zmdi zmdi-phone "></i></label>
             <input className="input_form" type="number" name="phone" value={user.phone} onChange={handleInput} placeholder="Your Number" /><br />
             <label><i className="zmdi zmdi-lock"></i></label>
-            <input className="input_form" type="text" name="password" value={user.password} onChange={handleInput} placeholder="Password" /><br />
+            <input className="input_form" type="password" name="password" value={user.password} onChange={handleInput} placeholder="Password" /><br />
             <label><i className="zmdi zmdi-lock"></i></label>
-            <input className="input_form" type="text" name="cpassword" value={user.cpassword} onChange={handleInput} placeholder=" Confirm Your password" autoComplete="new-password" />
+            <input className="input_form" type="password" name="cpassword" value={user.cpassword} onChange={handleInput} placeholder=" Confirm Your password" autoComplete="new-password" />
             <button type="submit" onClick={postData} className="btn btn-primary mt-2">Register</button>
             <span ><NavLink className="form-bottom" to='/login'>I have already registered</NavLink></span>
           </form>

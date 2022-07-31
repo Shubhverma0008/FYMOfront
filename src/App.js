@@ -10,7 +10,6 @@ import Logout from './components/Logout/Logout'
 import Details from './components/Details/Details'
 import Person from './components/Person/Person'
 import Error from './components/Error/Error'
-import Admin from './components/Admin/Admin'
 import {reducer,intialState} from '../src/reducer/UseReducer'
 
 
@@ -28,7 +27,6 @@ const App=()=>{
       <Routes>
         <Route exact path='/' element={<Home/>} />
         <Route exact path='/contact' element={<Contact/>} />
-        <Route exact path='/admin' element={<Admin/>} />
         <Route exact path='/register' element={<Register/>} />
         <Route exact path='/login' element={<Login/>} />
         <Route exact path='/status' element={<Status/>} />
