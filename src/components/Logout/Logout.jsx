@@ -23,7 +23,7 @@ const Logout=()=>{
                 },
               };
             
-            const data=await axios.get('https://fymoo.herokuapp.com/deleteCookie',config);
+            const data=await axios.get('https://fymoo.herokuapp.com/api/auth/deleteCookie',config);
             if(data.status===200){
                 dispatch({type:"USER",payload:false});
                 Navigate('/');
