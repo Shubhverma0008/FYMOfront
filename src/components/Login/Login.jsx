@@ -1,5 +1,5 @@
 import axios from "axios";
-import React,{StrictMode, useContext, useState} from "react";
+import React,{useContext, useState} from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { UserContext } from "../../App";
 import Cookies from 'universal-cookie';
@@ -15,15 +15,11 @@ const Login=()=>{
         email:"",
         password:""
     });
-    const createCookie = (data) => {
-        cookies.set('jwtusersdetails', data,{sameSite:StrictMode,path:'/',expires: new Date(new Date().getTime() + 100 * 1000000000)});
+    const createCookie = () => {
+        axios.get('https://fymoo.herokuapp.com/api/auth/setCookie',{ withCredentials: true }).then((res) =>{
+          console.log(res.data)
+        })
       }
-      
-    // const createCookie = () => {
-    //     axios.get('https://fymoo.herokuapp.com/api/auth/setCookie',{ withCredentials: true }).then((res) =>{
-    //       console.log(res.data)
-    //     })
-    //   }
     const handleInput=(e)=>{
         const name=e.target.name;
         const value=e.target.value;
@@ -36,7 +32,7 @@ const Login=()=>{
         try{
             
             const data=await axios.post('https://fymoo.herokuapp.com/api/auth/signIn',user);
-             createCookie(data.data);
+             createCookie();
             if(data.status===200)
             {   dispatch({type:"USER",payload:true})
                 window.alert("wow you are logged in");
