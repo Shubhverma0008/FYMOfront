@@ -9,7 +9,7 @@ const Logout=()=>{
     const Navigate=useNavigate();
     const {state,dispatch}=useContext(UserContext);
     const deleteCookie = () => {
-        cookie.remove('jwtusersdetails', { path: '/' });
+        cookie.remove('jwtusersdetails');//jwtusersdetails
             dispatch({type:"USER",payload:false});
              Navigate('/');
          
