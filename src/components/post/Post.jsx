@@ -4,7 +4,7 @@ export default function Post({ name, height, location, currentstatus, img }) {
     const pf='https://fymoo.herokuapp.com/';
     var x;
     if(img)
-    x=img;
+    x=pf+img;
     else
     x='/assets/noAvatar.png';
     return (
