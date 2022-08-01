@@ -33,10 +33,7 @@ const Details=()=>{
         
         try{
             const imgdata=await axios.post('https://fymoo.herokuapp.com/uploadimg',data);
-            console.log(imgdata.data);
-            // setUser({...user,img:imgdata.data});
             user.img= imgdata.data;
-            console.log(user);
         }catch(err){
         }
     }
@@ -44,7 +41,6 @@ const Details=()=>{
             const userdetails=await axios.get('https://fymoo.herokuapp.com/api/auth/getdata');
             user.userId=userdetails.data._id;           
              const datapost=await axios.post('https://fymoo.herokuapp.com/api/auth/postmissingperson',user);
-             console.log(datapost);
              if(datapost.status===200)
              {dispatch({type:"USER",payload:true})
              window.alert("Information updated successfully");

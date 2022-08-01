@@ -18,17 +18,11 @@ const Register = () => {
   }
   const postData = async (e) => {
     e.preventDefault();
-    // const {name,email,phone,password,cpassword}=user;
-    // const data;
-    
     try {
-      // console.log(user);
       const data = await axios.post('https://fymoo.herokuapp.com/api/auth/register', user);
-      console.log(data);
       window.alert("You are registred successfully");
       Navigate('/login');
     } catch (err) {
-      // console.log(data);
       window.alert("please enter valid details");
       console.log(err);
     }

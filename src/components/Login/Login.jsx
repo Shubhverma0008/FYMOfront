@@ -7,7 +7,6 @@ axios.defaults.withCredentials = true
  
 const cookies = new Cookies();
  
-
 const Login=()=>{
     const {state,dispatch}=useContext(UserContext);
     const Navigate=useNavigate();
@@ -15,11 +14,6 @@ const Login=()=>{
         email:"",
         password:""
     });
-    // const createCookie = () => {
-    //     axios.get('https://fymoo.herokuapp.com/api/auth/setCookie',{ withCredentials: true }).then((res) =>{
-    //       console.log(res.data)
-    //     })
-    //   }
     const handleInput=(e)=>{
         const name=e.target.name;
         const value=e.target.value;
@@ -27,8 +21,6 @@ const Login=()=>{
     }
     const postData= async(e)=>{
         e.preventDefault();
-        const email=user.email,password=user.password;
-       
         try{
             const config = {
                 headers: {
@@ -38,8 +30,6 @@ const Login=()=>{
               };
             
             const data=await axios.post('https://fymoo.herokuapp.com/api/auth/signIn',user,config);
-            //  createCookie();
-         
             if(data.status===200)
             {   dispatch({type:"USER",payload:true})
                 window.alert("wow you are logged in");

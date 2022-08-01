@@ -1,7 +1,6 @@
 import React from "react";
 import './post.css'
 export default function Post({ name, height, location, currentstatus, img }) {
-    // console.log(img)
     const pf='https://fymoo.herokuapp.com/';
     var x;
     if(img)
