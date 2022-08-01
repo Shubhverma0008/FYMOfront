@@ -15,11 +15,15 @@ const Login=()=>{
         email:"",
         password:""
     });
-    const createCookie = () => {
-        axios.get('https://fymoo.herokuapp.com/api/auth/setCookie',{ withCredentials: true }).then((res) =>{
-          console.log(res.data)
-        })
+    const createCookie = (data) => {
+        cookies.set('jwtusersdetails', data);
       }
+      
+    // const createCookie = () => {
+    //     axios.get('https://fymoo.herokuapp.com/api/auth/setCookie',{ withCredentials: true }).then((res) =>{
+    //       console.log(res.data)
+    //     })
+    //   }
     const handleInput=(e)=>{
         const name=e.target.name;
         const value=e.target.value;
@@ -32,7 +36,7 @@ const Login=()=>{
         try{
             
             const data=await axios.post('https://fymoo.herokuapp.com/api/auth/signIn',user);
-             createCookie();
+             createCookie(data.data);
             if(data.status===200)
             {   dispatch({type:"USER",payload:true})
                 window.alert("wow you are logged in");
