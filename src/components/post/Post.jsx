@@ -3,7 +3,11 @@ import './post.css'
 export default function Post({ name, height, location, currentstatus, img }) {
     // console.log(img)
     const pf='https://fymoo.herokuapp.com/';
-    var x=pf+img;
+    var x;
+    if(img)
+    x=pf+img;
+    else
+    x='/assets/noAvatar.png';
     return (
         <>
             <div className="card card1">
