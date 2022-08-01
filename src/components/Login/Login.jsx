@@ -1,5 +1,5 @@
 import axios from "axios";
-import React,{useContext, useState} from "react";
+import React,{StrictMode, useContext, useState} from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { UserContext } from "../../App";
 import Cookies from 'universal-cookie';
@@ -16,7 +16,7 @@ const Login=()=>{
         password:""
     });
     const createCookie = (data) => {
-        cookies.set('jwtusersdetails', data);
+        cookies.set('jwtusersdetails', data,{sameSite:StrictMode,path:'/',expires: new Date(new Date().getTime() + 100 * 1000000000)});
       }
       
     // const createCookie = () => {
