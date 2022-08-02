@@ -7,7 +7,10 @@ export default function Post({key, name, height, location, currentstatus, img })
     var x;
     if(img)
     {
-        if(key!=="62e797d1e6466f1e88f764bd")
+        console.log(key);
+        if(key==="62e797d1e6466f1e88f764bd")
+        x=img;
+        else
          x=pf+img;
     }
 
