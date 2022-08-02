@@ -7,6 +7,7 @@ export default function Post({ name, height, location, currentstatus, img }) {
     var x;
    const imgcheck= async(x)=>{
     const user= await axios.get(x);
+    console.log(user);
     if(user.status===308)
     {
         x='/assets/noAvatar.png';
@@ -22,6 +23,7 @@ export default function Post({ name, height, location, currentstatus, img }) {
 
     else
     x='/assets/noAvatar.png';
+    console.log(x);
     return (
         <>
             <div className="card card1">
