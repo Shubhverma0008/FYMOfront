@@ -5,20 +5,9 @@ export default function Post({ name, height, location, currentstatus, img }) {
     
     const pf='https://fymoo.herokuapp.com/';
     var x;
-   const imgcheck= async(x)=>{
-    const user= await axios.get(x);
-    console.log(user);
-    if(user.status===308)
-    {
-        x='/assets/noAvatar.png';
-    }
-
-   }
     if(img)
     {
     x=pf+img;
-     imgcheck(x);
-
     }
 
     else
