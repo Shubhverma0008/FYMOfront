@@ -16,6 +16,7 @@ const Status=()=>{
       dispatch({type:"USER",payload:true})
       // console.log(user);
       check=user.data.phone;
+      console.log(check);
       const list=await axios.get(`https://fymoo.herokuapp.com/api/auth/getmissingpersonlist/${user.data._id}`);
       setData(list.data);  
     }catch(err){
@@ -34,7 +35,7 @@ const Status=()=>{
         <Post key="62e797d1e6466f1e88f764bd" name="Jolly" height="165" location="LONDON" currentstatus="1" img="/assets/girl.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="Kaby" height="179" location="New York" currentstatus="1" img="/assets/man2.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="Raju" height="169" location="LKO" currentstatus="1" img="/assets/man3.jpg"/>
-        <Post key="62e797d1e6466f1e88f764bd" name="Karan" height="167" location="Mumbai" currentstatus="1" img="/assets/man4.jpg"/></>:<></>}
+        <Post key="62e797d1e6466f1e88f764bd" name="Karan" height="167" location="Mumbai" currentstatus="1" img="/assets/man4.jpg"/></>:<>fgh</>}
         
 
         {data.map((p) => (
