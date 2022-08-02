@@ -7,7 +7,7 @@ export default function Post({id, name, height, location, currentstatus, img }) 
     var x;
     if(img)
     {
-        console.log(id);
+        
         if(id==="62e797d1e6466f1e88f764bd")
         x=img;
         else
@@ -16,7 +16,7 @@ export default function Post({id, name, height, location, currentstatus, img }) 
 
     else
     x='/assets/noAvatar.png';
-    console.log(x);
+    
     return (
         <>
             <div className="card card1">
