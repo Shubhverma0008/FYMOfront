@@ -9,7 +9,7 @@ const Status=()=>{
  const {state,dispatch}= useContext(UserContext);
  const [data,setData]=useState([]);
   const Navigate=useNavigate();
-  var check;
+  let check;
   const callstatuspage= async()=>{
     try{
       const user= await axios.get('https://fymoo.herokuapp.com/api/auth/getdata');
@@ -30,7 +30,7 @@ const Status=()=>{
     return (
         <>
         <div className="row row1">
-    { check=="62e797d1e6466f1e88f764bd"  ?<> <Post key="62e797d1e6466f1e88f764bd" name="Shubh" height="169" location="MMB" currentstatus="3" img="/assets/shubhPic.jpg"/>
+    { check==="62e797d1e6466f1e88f764bd" ?<> <Post key="62e797d1e6466f1e88f764bd" name="Shubh" height="169" location="MMB" currentstatus="3" img="/assets/shubhPic.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="John" height="179" location="USA" currentstatus="2" img="/assets/man1.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="Jolly" height="165" location="LONDON" currentstatus="1" img="/assets/girl.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="Kaby" height="179" location="New York" currentstatus="1" img="/assets/man2.jpg"/>
