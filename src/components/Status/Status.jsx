@@ -14,6 +14,7 @@ const Status=()=>{
     try{
        user= await axios.get('https://fymoo.herokuapp.com/api/auth/getdata');
       dispatch({type:"USER",payload:true})
+      // console.log(user);
       const list=await axios.get(`https://fymoo.herokuapp.com/api/auth/getmissingpersonlist/${user.data._id}`);
       setData(list.data);  
     }catch(err){
@@ -27,7 +28,7 @@ const Status=()=>{
     return (
         <>
         <div className="row row1">
-    { user.phone==9616543935  ?<> <Post key="62e797d1e6466f1e88f764bd" name="Shubh" height="169" location="MMB" currentstatus="3" img="/assets/shubhPic.jpg"/>
+    { user.data.phone==9616543935  ?<> <Post key="62e797d1e6466f1e88f764bd" name="Shubh" height="169" location="MMB" currentstatus="3" img="/assets/shubhPic.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="John" height="179" location="USA" currentstatus="2" img="/assets/man1.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="Jolly" height="165" location="LONDON" currentstatus="1" img="/assets/girl.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="Kaby" height="179" location="New York" currentstatus="1" img="/assets/man2.jpg"/>
