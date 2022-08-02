@@ -1,14 +1,14 @@
 import React from "react";
 import './post.css'
 import axios from "axios";
-export default function Post({key, name, height, location, currentstatus, img }) {
+export default function Post({id, name, height, location, currentstatus, img }) {
     
     const pf='https://fymoo.herokuapp.com/';
     var x;
     if(img)
     {
-        console.log(key);
-        if(key==="62e797d1e6466f1e88f764bd")
+        console.log(id);
+        if(id==="62e797d1e6466f1e88f764bd")
         x=img;
         else
          x=pf+img;
