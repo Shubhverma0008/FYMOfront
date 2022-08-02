@@ -38,7 +38,7 @@ const Status=()=>{
         <Post key="62e797d1e6466f1e88f764bd" name="Jolly" height="165" location="LONDON" currentstatus="1" img="/assets/girl.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="Kaby" height="179" location="New York" currentstatus="1" img="/assets/man2.jpg"/>
         <Post key="62e797d1e6466f1e88f764bd" name="Raju" height="169" location="LKO" currentstatus="1" img="/assets/man3.jpg"/>
-        <Post key="62e797d1e6466f1e88f764bd" name="Karan" height="167" location="Mumbai" currentstatus="1" img="/assets/man4.jpg"/></>:<>fgh</>}
+        <Post key="62e797d1e6466f1e88f764bd" name="Karan" height="167" location="Mumbai" currentstatus="1" img="/assets/man4.jpg"/></>:<></>}
         
 
         {data.map((p) => (
