@@ -34,7 +34,7 @@ const Register = () => {
           <h1 className="m-4">Sign up</h1>
           <form className="m-4" autoComplete="off" method="POST">
             <label> <i className="zmdi zmdi-account"></i> </label>
-            <input className="input_form" type="text" name="name" value={user.name} onChange={handleInput} placeholder="Your Name" autoComplete="off" /><br />
+            <input className="input_form" type="text" name="name" value={user.name} onChange={handleInput} placeholder="Your Name" autoComplete="off"  /><br />
             <label><i className="zmdi zmdi-email"></i></label>
             <input className="input_form" type="email" name="email" value={user.email} onChange={handleInput} placeholder="Your Email" /><br />
             <label><i className="zmdi zmdi-phone "></i></label>
