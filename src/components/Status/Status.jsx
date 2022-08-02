@@ -8,14 +8,16 @@ import Post from "../post/Post";
 const Status=()=>{
  const {state,dispatch}= useContext(UserContext);
  const [data,setData]=useState([]);
+ const [check,setcheck]=useState("");
   const Navigate=useNavigate();
-  let check="n";
+ 
   const callstatuspage= async()=>{
     try{
       const user= await axios.get('https://fymoo.herokuapp.com/api/auth/getdata');
       dispatch({type:"USER",payload:true})
       // console.log(user);
-      check=user.data._id;
+      // check=user.data._id;
+      setcheck(user.data._id);
       console.log(check);
       const list=await axios.get(`https://fymoo.herokuapp.com/api/auth/getmissingpersonlist/${user.data._id}`);
       setData(list.data);  
